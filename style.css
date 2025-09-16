@@ -1,0 +1,510 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(200, 208, 204);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(197, 211, 204);
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    height: 80px;
+    box-shadow: 0 13px 23px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+.logo{
+    margin-left: 30px;
+    padding: 2px 10px 3px 10px;
+}
+.logo h1{
+    font-size: 30px;
+    color: black;
+    font-weight: 900;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+nav{
+    display: flex;
+    font-family: Monospace,Sans-serif;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 300px;
+    font-size: 1.2rem;
+
+}
+nav a{
+    margin: 0 10px 0  30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+    transition: color 0.3s ease;
+}
+.home{
+    color: rgb(27, 110, 177);
+
+}
+/* .home a::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(27, 110, 177);
+    bottom: -5px;
+    left: 0;
+    
+} */
+.navbar a:hover{
+    color: rgb(27, 110, 177);
+}
+.navbar a::after{
+    content: '';
+    
+    width: 0;
+    height: 2px;
+    background-color: rgb(27, 110, 177);
+    display: block;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+nav a:hover::after{
+    width: 100%;
+}
+.sign-icon{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-left: -90px;
+    margin-right: 20px;
+    color: black;
+    top: 30px;
+    /* background-image: url('sign-icon.png'); */
+    /* background-size: cover; */
+    cursor: pointer;
+}
+.btw{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: 2px;
+    margin-left: -30px;
+    margin-right: -10px;
+   
+    color: black;
+    /* background-image: url('btw-icon.png'); */
+    /* background-size: cover; */
+    cursor: pointer;
+}
+.cart-icon{
+    position: relative;
+    width: 30px;
+    margin-left: 5px;
+    margin-right: -100px;
+     top: -32px;
+    height: 30px;
+    color: black;
+    /* background-image: url('cart-icon.png'); */
+    /* background-size: cover; */
+    cursor: pointer;
+}
+.bg-video{
+  width: 90%;
+  height: 100vh;
+  size: cover;
+    /* position: absolute;
+    top: 110px;
+    right: 0;
+    left: 0; */
+    margin-right: -200px;
+}
+.bg-video video{
+    width: 100%;
+    height: 86.5vh;
+    object-fit: cover;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    margin-right: -200px;
+}
+.blur{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 86.5vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+.content{
+    position: absolute;
+    top: 220px;
+    left: 10%;
+    width: 80%;
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 1000;
+    
+    border-radius: 1000px;
+}
+.content h1{
+    font-size: 50px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.content p{
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.content button{
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 2px solid rgb(27, 110, 177);
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.content button:hover{
+    color: white;
+    background-color: rgb(20, 80, 130);
+}
+
+.banner{
+    position: absolute;
+    top: 610px;
+    left: 54px;
+    border-radius: 10px;
+    width: 90%;
+    height: 30vh;
+    /* background-image: url('/image/banner1.jpg') ; */
+    background-size: cover;
+    background-position: center;
+    z-index: 1000;
+    box-shadow: 0 13px 23px rgba(0, 0, 0, 0.5);
+}
+.banner-content{
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    height: 80%;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.banner form{
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.banner-content h2{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    font-family: 'apple', sans-serif;
+    font-weight: 750;
+    margin-left: -80px;
+}
+.banner-content h3{
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    font-family: 'apple', sans-serif;
+    font-weight: 500;
+    margin-left: -120px;
+}
+
+.banner-content a{
+    font-size: 1rem;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color: rgb(80, 27, 77);
+    font-family: 'apple', sans-serif;
+    font-weight: 500;
+}
+.banner-content a{
+    text-decoration: none;
+}
+.banner form input{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(27, 110, 177);
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+    
+    margin-left: -50px;
+    /* margin-right: 10px; */
+}
+.banner form button{
+    /* padding: 10px 20px; */
+    width: 70px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    position: absolute;
+    background-color: rgb(27, 110, 177);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+footer{
+    position: absolute;
+    top: 900px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(197, 211, 204);
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+.footer-logo{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 2px 10px 3px 10px;
+    cursor: pointer;
+}
+.footer-socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: -25px; */
+    margin-bottom: 50px;
+}
+.socil-icon{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-left: 2px;
+
+}
+.footer-socials a{
+    text-decoration: none;
+    color: black;
+}
+.footer-socials a:hover{
+    transform: scale(1.5);
+}
+@media screen and (max-width: 768px) {
+    header .logo{
+        margin-left: -10px;
+
+    }
+    header{
+        width: auto;
+    }
+    nav{
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        /* margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        width: 300px; */
+        }
+    
+    .logo h1{
+        font-size: 24px;
+    }
+    .sign-icon, .btw, .cart-icon{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .bg-video video{
+        height: 70vh;
+    }
+    .content{
+        width: 90%;
+        left: 5%;
+        top: 200%;
+    }
+    .content h1{
+        font-size: 5.2rem;
+        margin-top: 50px;
+    }
+    .banner{
+        position: absolute;
+        top: 700px;
+    }
+    .banner-content{
+        left: 35%;
+        top: 10%;
+        transform: translateX(-20%);
+        text-align: center;
+    }
+    .banner form{
+        left: 50%;
+        top: 60%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    footer{
+        position: absolute;
+        top: 1100px;
+        width: 100%;
+        height: 60px;
+        background-color: rgb(197, 211, 204);
+        color: black;
+        text-align: center;
+        padding: 10px 0;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+    
+}
+@media screen and (max-width: 912px) {
+   nav{
+    margin-left: -30px;
+   }
+   
+    .cart-icon{
+        margin-right: -50px;
+        top: -30px;
+    }
+    .bg-video{
+        size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+    .content{
+        width: 90%;
+        left: 5%;
+        top: 300%;
+    }
+    .content h1{
+        font-size: 4rem;
+        margin-top: 100px;
+    }
+    .content p{
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .banner{
+        position: absolute;
+        top: 800px;
+        left: 54px;
+        width: 90%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .banner-content{
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        height: 80%;
+        padding: 10px;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+    }
+    .banner form{
+        position: absolute;
+        top: 60%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+    }
+    .banner-content h2{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        font-family: 'apple', sans-serif;
+        font-weight: 750;
+        margin-left: -80px;
+    }
+    .banner-content h3{
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        font-family: 'apple', sans-serif;
+        font-weight: 500;
+        margin-left: -120px;
+    }
+    footer{
+        position: absolute;
+        top: 1300px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 60px;
+        background-color: rgb(197, 211, 204);
+        color: black;
+        text-align: center;
+        padding: 10px 0;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+    header{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px 10px;
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .logo h1{
+        font-size: 20px;
+    }
+    .bg-video video{
+        height: 60vh;
+    }
+    .content{
+        width: 90%;
+        left: 5%;
+        top: 150%;
+    }
+}
